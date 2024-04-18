@@ -1,23 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Product>PdfSharp Text Extractor</Product>
-    <Company />
-    <Authors>AlexArchen</Authors>
-    <Version>1.0.2</Version>
-    <Description>Simple Pdf text extractor based on PDFSharp. Supports both single and two-byte fonts, ToUnicode maps, Encodings. Doesn't support precise symbol positioning on page so text order can differ from the original.</Description>
-    <Copyright>Copyright 2019 AlexArchen</Copyright>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/alexarchen/PdfSharpTextExtractor/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/alexarchen/PdfSharpTextExtractor</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/alexarchen/PdfSharpTextExtractor</RepositoryUrl>
-    <RepositoryType>github</RepositoryType>
-    <PackageTags>pdf text extract</PackageTags>
+	<TargetFramework>netstandard2.0</TargetFramework>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<Product>PdfSharp Text Extractor</Product>
+	<Company />
+	<Authors>AlexArchen</Authors>
+	<Version>1.0.2</Version>
+	<Description>Simple Pdf text extractor based on PDFSharp. Supports both single and two-byte fonts, ToUnicode maps, Encodings. Doesn't support precise symbol positioning on page so text order can differ from the original.</Description>
+	<Copyright>Copyright 2019 AlexArchen</Copyright>
+	<PackageLicenseUrl>https://raw.githubusercontent.com/alexarchen/PdfSharpTextExtractor/master/LICENSE</PackageLicenseUrl>
+	<PackageProjectUrl>https://github.com/alexarchen/PdfSharpTextExtractor</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/alexarchen/PdfSharpTextExtractor</RepositoryUrl>
+	<RepositoryType>github</RepositoryType>
+	<PackageTags>pdf text extract</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PDFsharpNetStandard2" Version="1.51.4845" />
+	<PackageReference Include="PDFsharpNetStandard2" Version="1.51.4845" />
   </ItemGroup>
 
 </Project>

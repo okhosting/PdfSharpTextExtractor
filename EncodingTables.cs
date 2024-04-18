@@ -5,50 +5,50 @@ using System.Linq;
 
 namespace PdfSharpTextExtractor
 {
-    internal static class EncodingTables
-    {
+	internal static class EncodingTables
+	{
 
-     public const string NULL = null;
-
-
-        static Dictionary<ushort, string> Convert(string[] encoding)
-        {
-            Dictionary<ushort, string> res = new Dictionary<ushort, string>();
-            ushort key = 0;
-            foreach (string s in encoding)
-            {
-                if (s != NULL)
-                {
-                    char c;
-                    if (ToUnicode.TryGetValue(s,out c))
-                      res.Add(key, ""+c);
-                }
-                key++;
-            }
-            return res;
-        }
-
-        public static Dictionary<ushort, string> MacRoman => Convert(macRomanEncoding);
-        public static Dictionary<ushort, string> MacExpert => Convert(macExpertEncoding);
-        public static Dictionary<ushort, string> WinAnsi => Convert(winAnsiEncoding);
-        public static Dictionary<ushort, string> Standard => Convert(standardEncoding);
-        public static Dictionary<ushort, string> Symbol => Convert(symbolEncoding);
-
-        static Dictionary<string, char> ToUnicode;
-
-        static EncodingTables()
-        {
-            ToUnicode = new Dictionary<string, char>();
-            for (int i =0; i<nameToUnicodeTable.Length/nameToUnicodeTable.Rank;i++)
-            {
-                ToUnicode.Add((string)nameToUnicodeTable[i, 1], (char)(int)nameToUnicodeTable[i, 0]);
-            }
-        }
+	 public const string NULL = null;
 
 
-        #region Encodings
+		static Dictionary<ushort, string> Convert(string[] encoding)
+		{
+			Dictionary<ushort, string> res = new Dictionary<ushort, string>();
+			ushort key = 0;
+			foreach (string s in encoding)
+			{
+				if (s != NULL)
+				{
+					char c;
+					if (ToUnicode.TryGetValue(s,out c))
+					  res.Add(key, ""+c);
+				}
+				key++;
+			}
+			return res;
+		}
 
-        static string [] macRomanEncoding = {
+		public static Dictionary<ushort, string> MacRoman => Convert(macRomanEncoding);
+		public static Dictionary<ushort, string> MacExpert => Convert(macExpertEncoding);
+		public static Dictionary<ushort, string> WinAnsi => Convert(winAnsiEncoding);
+		public static Dictionary<ushort, string> Standard => Convert(standardEncoding);
+		public static Dictionary<ushort, string> Symbol => Convert(symbolEncoding);
+
+		static Dictionary<string, char> ToUnicode;
+
+		static EncodingTables()
+		{
+			ToUnicode = new Dictionary<string, char>();
+			for (int i =0; i<nameToUnicodeTable.Length/nameToUnicodeTable.Rank;i++)
+			{
+				ToUnicode.Add((string)nameToUnicodeTable[i, 1], (char)(int)nameToUnicodeTable[i, 0]);
+			}
+		}
+
+
+		#region Encodings
+
+		static string [] macRomanEncoding = {
   NULL,
   NULL,
   NULL,
@@ -1859,12 +1859,12 @@ namespace PdfSharpTextExtractor
   "a190",
   "a191",
   NULL
-        };
+		};
 
 
-        #endregion Encodings
+		#endregion Encodings
 
-        #region Unicode
+		#region Unicode
 
    static object[,] nameToUnicodeTable = {
    {0x0021,"!"},
@@ -2951,6 +2951,6 @@ namespace PdfSharpTextExtractor
   {0x007d, "}"},
   {0x007e, "~"}  };
 
-        #endregion Unicode
-    }
+		#endregion Unicode
+	}
 }

@@ -33,13 +33,13 @@ using (doc  = PdfReader.Open(file, PdfDocumentOpenMode.ReadOnly))
 {
    StringBuilder ta = new StringBuilder();
    using (PdfSharpTextExtractor.Extractor extractor = new PdfSharpTextExtractor.Extractor(doc))
-    {
-       foreach (PdfPage page in doc.Pages)
-        {
-           extractor.ExtractText(page, ta);
-        }
+	{
+	   foreach (PdfPage page in doc.Pages)
+		{
+		   extractor.ExtractText(page, ta);
+		}
 
-     }
+	 }
 }
 ```
 
